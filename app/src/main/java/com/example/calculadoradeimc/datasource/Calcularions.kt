@@ -8,7 +8,7 @@ object Calcularions {
     fun calcularIMC(height: String, weight: String, response: (String, Boolean)->Unit){
         if(height.isNotEmpty() && weight.isNotEmpty()){
             val weightFormatted = weight.replace(",",".").toDoubleOrNull()
-            val heightFormatted = weight.toDoubleOrNull()
+            val heightFormatted = height.toDoubleOrNull()
             if(weightFormatted != null && heightFormatted != null){
                 val imc = weightFormatted / (heightFormatted / 100 * heightFormatted / 100)
                 val imcFormatted = String.format("%.2f", imc)
